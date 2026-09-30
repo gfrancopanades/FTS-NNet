@@ -216,3 +216,24 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- FTS-NNet -------------------------------------------------------------
+# Input data (the real corridor data are not redistributed; the synthetic
+# file is unpacked here by scripts/run_demo.sh)
+dades/
+# Model artefacts, simulations and harvests: everything under experiments/
+# except the run registry and the job maps that document the reported runs
+experiments/*
+!experiments/registry_final.json
+# SLURM logs and regenerated outputs
+log_output/
+log_error/
+reports/
+visualizations/
+*.parquet
+*.pt
+*.ckpt
+*.pkl
+*.joblib
+# created at import by src/data_file_names.py
+model_*/
